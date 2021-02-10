@@ -39,8 +39,14 @@ export const colors = {
   },
 };
 
-export default {
+const theme = {
   colors,
   borderRadius: "12px",
   transition: "200ms ease-in-out",
+  fontFamily: "'Rubik', sans-serif",
 };
+
+type ThemeType = typeof theme;
+
+export type { ThemeType };
+export default theme;
