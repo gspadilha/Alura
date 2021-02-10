@@ -1,21 +1,16 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import PropTypes, { ReactElementLike, ReactNodeArray } from "prop-types";
 import { TextBase } from "./styles";
 
-interface ITextProps {
+interface ITextProps extends HTMLAttributes<HTMLElement> {
   tag: string;
   variant: string;
   children: string | number | boolean | {} | ReactElementLike | ReactNodeArray;
 }
 
-const Text: React.FC<ITextProps> = ({
-  tag,
-  variant,
-  children,
-  ...anotherProps
-}) => {
+const Text: React.FC<ITextProps> = ({ tag, variant, children, ...props }) => {
   return (
-    <TextBase as={tag} variant={variant} {...anotherProps}>
+    <TextBase as={tag} variant={variant} {...props}>
       {children}
     </TextBase>
   );

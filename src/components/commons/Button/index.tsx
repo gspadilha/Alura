@@ -1,21 +1,20 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { ButtonContainer } from "./styles";
 
-interface IButton {
+type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
   ghost?: boolean;
   variant?: string;
-  children?: React.ReactNode;
-}
+};
 
-const Button: React.FC<IButton> = ({
+const Button: React.FC<IButtonProps> = ({
   label,
   ghost,
   variant,
   ...anotherProps
 }) => {
   return (
-    <ButtonContainer ghost={ghost} variant={variant}>
+    <ButtonContainer ghost={ghost} variant={variant} {...anotherProps}>
       {label}
     </ButtonContainer>
   );

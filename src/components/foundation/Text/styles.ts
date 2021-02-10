@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
+import { propToStyle } from "../../theme/utils/propToStyles";
 
 interface ITextProps {
   tag: string;
   variant: string;
+  textAlign?: Record<string, string>;
 }
 
 export const TextStyleVariantsMap: Record<string, any> = {
@@ -23,4 +25,8 @@ export const TextStyleVariantsMap: Record<string, any> = {
 
 export const TextBase = styled.span<ITextProps>`
   ${(props) => TextStyleVariantsMap[props.variant]}
+
+  ${propToStyle("textAlign")}
+  ${propToStyle("marginBottom")}
+  ${propToStyle("margin")}
 `;

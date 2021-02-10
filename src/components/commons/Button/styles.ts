@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import get from "lodash/get";
 import { TextStyleVariantsMap } from "../../foundation/Text/styles";
 import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
+import { propToStyle } from "../../theme/utils/propToStyles";
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
@@ -47,10 +48,6 @@ export const ButtonContainer = styled.button<IButtonProps>`
     opacity: 0.5;
   }
 
-  &:last-of-type {
-    margin-right: 0;
-  }
-
   ${breakpointsMedia({
     xs: css`
       ${TextStyleVariantsMap.smallestException}
@@ -59,4 +56,7 @@ export const ButtonContainer = styled.button<IButtonProps>`
       ${TextStyleVariantsMap.paragraph1}
     `,
   })}
+
+  ${propToStyle("margin")}
+  ${propToStyle("display")}
 `;

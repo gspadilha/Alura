@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { TextStyleVariantsMap } from "../../foundation/Text/styles";
+import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
 
 export const FooterContainer = styled.footer`
   padding: 1rem;
@@ -24,4 +26,13 @@ export const FooterContainer = styled.footer`
       opacity: 0.5;
     }
   }
+
+  ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariantsMap.smallestException}
+    `,
+    md: css`
+      ${TextStyleVariantsMap.paragraph1}
+    `,
+  })}
 `;
