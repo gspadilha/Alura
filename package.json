@@ -1,10 +1,11 @@
 {
   "name": "with-styled-components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "release": "standard-version"
   },
   "dependencies": {
     "lodash": "^4.17.20",
@@ -33,6 +34,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4",
     "prettier": "^2.2.1",
+    "standard-version": "^9.1.0",
     "typescript": "^4.1.4"
   },
   "license": "MIT"
