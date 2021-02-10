@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
+import { propToStyle } from "../../../theme/utils/propToStyles";
 
 const Container = styled.div`
   width: 100%;
@@ -44,28 +45,6 @@ const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
-
-  div {
-    position: relative;
-
-    ${breakpointsMedia({
-      xs: css`
-        top: 0;
-      `,
-      sm: css`
-        top: 0;
-      `,
-      md: css`
-        top: 25%;
-      `,
-      lg: css`
-        top: 25%;
-      `,
-      xl: css`
-        top: 25%;
-      `,
-    })}
-  }
 
   img {
     display: block;
@@ -150,6 +129,13 @@ const Col = styled.div`
       }),
     });
   }}
+
+  ${propToStyle("flex")}
+  ${propToStyle("display")}
+  ${propToStyle("flexWrap")}
+  ${propToStyle("flexDirection")}
+  ${propToStyle("justifyContent")}
+  ${propToStyle("alignItems")}
 `;
 
 Col.defaultProps = {
