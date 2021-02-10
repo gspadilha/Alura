@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --secondaryColor: #88989e;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -11,9 +13,3 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 `;
-
-export const theme = {
-  colors: {
-    primary: "#0070f3",
-  },
-};

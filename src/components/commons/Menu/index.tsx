@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 import { HeaderContainer } from "./styles";
 
 const links = [
@@ -14,17 +15,19 @@ const Menu: React.FC = () => {
 
       <HeaderContainer.CentralSide>
         {links.map((link) => {
+          const { url, texto } = link;
+
           return (
-            <li>
-              <a href={link.url}>{link.texto}</a>
+            <li key={url}>
+              <a href={url}>{texto}</a>
             </li>
           );
         })}
       </HeaderContainer.CentralSide>
 
       <HeaderContainer.RightSide>
-        <button>Entrar</button>
-        <button>Cadastrar</button>
+        <Button ghost label={"Entrar"} />
+        <Button label={"Cadastrar"} />
       </HeaderContainer.RightSide>
     </HeaderContainer>
   );

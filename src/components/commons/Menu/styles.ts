@@ -33,15 +33,15 @@ HeaderContainer.CentralSide = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  border-top: 1px solid var(--secondaryColor);
-  border-bottom: 1px solid var(--secondaryColor);
+  border-top: 1px solid #88989e;
+  border-bottom: 1px solid #88989e;
   padding: 0.75rem;
 
   a {
     text-align: center;
     display: block;
     text-decoration: none;
-    color: var(--secondaryColor);
+    color: #88989e;
     transition: 200ms ease-in-out;
 
     &:hover,
