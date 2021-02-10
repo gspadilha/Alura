@@ -1,26 +1,29 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../theme";
-
+import get from "lodash/get";
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
 }
 
-const ButtonGhost = css`
-  color: ${({ theme }) => theme.colors.secondary};
+const ButtonGhost = css<IButtonProps>`
+  color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
   background-color: transparent;
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.secondary};
+    border: 1px solid
+      ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
   }
 `;
 
-const ButtonDefault = css`
-  color: white;
-  background-color: ${({ theme }) => theme.colors.primary};
+const ButtonDefault = css<IButtonProps>`
+  color: ${({ theme, variant }) =>
+    get(theme, `colors.${variant}.contrastText`)};
+  background-color: ${({ theme, variant }) =>
+    get(theme, `colors.${variant}.color`)};
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 1px solid
+      ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
   }
 `;
 
@@ -29,11 +32,13 @@ export const ButtonContainer = styled.button<IButtonProps>`
   cursor: pointer;
   padding: 0.75rem 1.5rem;
   font-weight: bold;
-  opacity: 1;
   border-radius: 8px;
   border: 1px solid transparent;
   margin-right: 1px;
-  ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)};
+
+  transition: opacity ${({ theme }) => theme.transition};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
 
   &:hover,
   &:focus {

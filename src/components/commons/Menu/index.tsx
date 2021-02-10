@@ -26,8 +26,8 @@ const Menu: React.FC = () => {
       </HeaderContainer.CentralSide>
 
       <HeaderContainer.RightSide>
-        <Button ghost label={"Entrar"} />
-        <Button label={"Cadastrar"} />
+        <Button label="Entrar" variant="secondary.main" ghost />
+        <Button label="Cadastrar" variant="primary.main" />
       </HeaderContainer.RightSide>
     </HeaderContainer>
   );
