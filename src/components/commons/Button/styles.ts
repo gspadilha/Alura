@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import get from "lodash/get";
+import { TextStyleVariantsMap } from "../../foundation/Text/styles";
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
@@ -35,6 +36,8 @@ export const ButtonContainer = styled.button<IButtonProps>`
   border-radius: 8px;
   border: 1px solid transparent;
   margin-right: 1px;
+
+  ${TextStyleVariantsMap.smallestException}
 
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};

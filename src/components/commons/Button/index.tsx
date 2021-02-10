@@ -13,7 +13,7 @@ const Button: React.FC<IButton> = ({
   ghost,
   variant,
   ...anotherProps
-}: IButton) => {
+}) => {
   return (
     <ButtonContainer ghost={ghost} variant={variant}>
       {label}

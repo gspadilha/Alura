@@ -1,4 +1,6 @@
 import React from "react";
+import Text from "../../foundation/Text";
+import { Logo } from "../../theme/logo";
 import Button from "../Button";
 import { HeaderContainer } from "./styles";
 
@@ -11,7 +13,9 @@ const links = [
 const Menu: React.FC = () => {
   return (
     <HeaderContainer>
-      <HeaderContainer.LeftSide>Logo</HeaderContainer.LeftSide>
+      <HeaderContainer.LeftSide>
+        <Logo />
+      </HeaderContainer.LeftSide>
 
       <HeaderContainer.CentralSide>
         {links.map((link) => {
@@ -19,7 +23,9 @@ const Menu: React.FC = () => {
 
           return (
             <li key={url}>
-              <a href={url}>{texto}</a>
+              <Text tag="a" variant="smallestException" href={url}>
+                {texto}
+              </Text>
             </li>
           );
         })}
