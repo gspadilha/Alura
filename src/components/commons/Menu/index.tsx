@@ -1,13 +1,13 @@
-import React from "react";
-import Text from "../../foundation/Text";
-import { Logo } from "../../theme/logo";
-import Button from "../Button";
-import { HeaderContainer } from "./styles";
+import React from 'react';
+import Text from '../../foundation/Text';
+import { Logo } from '../../theme/logo';
+import Button from '../Button';
+import { HeaderContainer } from './styles';
 
 const links = [
-  { texto: "Home", url: "/" },
-  { texto: "Perguntas Frequentes", url: "/faq" },
-  { texto: "Sobre", url: "/about" },
+  { texto: 'Home', url: '/' },
+  { texto: 'Perguntas Frequentes', url: '/faq' },
+  { texto: 'Sobre', url: '/about' },
 ];
 
 const Menu: React.FC = () => {
@@ -18,7 +18,7 @@ const Menu: React.FC = () => {
       </HeaderContainer.LeftSide>
 
       <HeaderContainer.CentralSide>
-        {links.map((link) => {
+        {links.map(link => {
           const { url, texto } = link;
 
           return (

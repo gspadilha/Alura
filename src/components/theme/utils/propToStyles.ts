@@ -1,11 +1,11 @@
-import { css } from "styled-components";
-import { breakpointsMedia } from "./breakpointsMedia";
+import { css } from 'styled-components';
+import { breakpointsMedia } from './breakpointsMedia';
 
 export function propToStyle(propName: string) {
   return (props: Record<string, any>) => {
     const propValue = props[propName];
 
-    if (typeof propValue === "object") {
+    if (typeof propValue === 'object') {
       return css`
         ${breakpointsMedia({
           ...(propValue.xs && {

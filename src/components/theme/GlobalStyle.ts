@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
-import { ThemeType } from ".";
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
+import { ThemeType } from '.';
 
 type ThemeProps = {
   theme: ThemeType;

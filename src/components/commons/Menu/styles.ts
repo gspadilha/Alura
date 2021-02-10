@@ -1,6 +1,6 @@
-import styled, { css, StyledComponentBase } from "styled-components";
-import { TextStyleVariantsMap } from "../../foundation/Text/styles";
-import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
+import styled, { css, StyledComponentBase } from 'styled-components';
+import { TextStyleVariantsMap } from '../../foundation/Text/styles';
+import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
 interface IHeaderContainer extends StyledComponentBase<any, {}> {
   LeftSide?: any;
@@ -9,7 +9,7 @@ interface IHeaderContainer extends StyledComponentBase<any, {}> {
 }
 
 export const HeaderContainer: IHeaderContainer = styled.nav`
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;

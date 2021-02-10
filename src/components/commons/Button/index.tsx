@@ -1,5 +1,5 @@
-import React, { ButtonHTMLAttributes } from "react";
-import { ButtonContainer } from "./styles";
+import React, { ButtonHTMLAttributes } from 'react';
+import { ButtonContainer } from './styles';
 
 type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;

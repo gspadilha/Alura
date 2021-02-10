@@ -1,6 +1,6 @@
-import React, { HTMLAttributes } from "react";
-import PropTypes, { ReactElementLike, ReactNodeArray } from "prop-types";
-import { TextBase } from "./styles";
+import React, { HTMLAttributes } from 'react';
+import PropTypes, { ReactElementLike, ReactNodeArray } from 'prop-types';
+import { TextBase } from './styles';
 
 interface ITextProps extends HTMLAttributes<HTMLElement> {
   tag: string;
@@ -26,8 +26,8 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  tag: "span",
-  variant: "paragraph1",
+  tag: 'span',
+  variant: 'paragraph1',
 };
 
 export default Text;

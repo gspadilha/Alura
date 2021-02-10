@@ -1,10 +1,10 @@
-import { NextRouter } from "next/dist/next-server/lib/router/router";
-import { AppPropsType } from "next/dist/next-server/lib/utils";
-import { PropsWithChildren } from "react";
-import { ThemeProvider } from "styled-components";
-import Head from "next/head";
-import { GlobalStyle } from "../src/components/theme/GlobalStyle";
-import theme from "../src/components/theme";
+import { NextRouter } from 'next/dist/next-server/lib/router/router';
+import { AppPropsType } from 'next/dist/next-server/lib/utils';
+import { PropsWithChildren } from 'react';
+import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import { GlobalStyle } from '../src/components/theme/GlobalStyle';
+import theme from '../src/components/theme';
 
 export default function App({
   Component,

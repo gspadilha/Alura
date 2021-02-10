@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
-import get from "lodash/get";
-import { TextStyleVariantsMap } from "../../foundation/Text/styles";
-import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
-import { propToStyle } from "../../theme/utils/propToStyles";
+import styled, { css } from 'styled-components';
+import get from 'lodash/get';
+import { TextStyleVariantsMap } from '../../foundation/Text/styles';
+import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
+import { propToStyle } from '../../theme/utils/propToStyles';
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
@@ -57,6 +57,6 @@ export const ButtonContainer = styled.button<IButtonProps>`
     `,
   })}
 
-  ${propToStyle("margin")}
-  ${propToStyle("display")}
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `;

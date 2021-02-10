@@ -1,4 +1,5 @@
-import { FooterContainer } from "./styles";
+import React from 'react';
+import { FooterContainer } from './styles';
 
 const Footer: React.FC = () => {
   return (
@@ -11,11 +12,11 @@ const Footer: React.FC = () => {
       </a>
 
       <p>
-        Orgulhosamente criado por{" "}
+        Orgulhosamente criado por{' '}
         <a href="https://gspadilha.dev.br/">
           <span>Guilherme Padilha</span>
-        </a>{" "}
-        durante o{" "}
+        </a>{' '}
+        durante o{' '}
         <a href="https://www.alura.com.br/">
           <span>Bootcamp Alura JAM Stack</span>
         </a>
