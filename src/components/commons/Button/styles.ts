@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import get from "lodash/get";
 import { TextStyleVariantsMap } from "../../foundation/Text/styles";
+import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
@@ -37,8 +38,6 @@ export const ButtonContainer = styled.button<IButtonProps>`
   border: 1px solid transparent;
   margin-right: 1px;
 
-  ${TextStyleVariantsMap.smallestException}
-
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
@@ -51,4 +50,13 @@ export const ButtonContainer = styled.button<IButtonProps>`
   &:last-of-type {
     margin-right: 0;
   }
+
+  ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariantsMap.smallestException}
+    `,
+    md: css`
+      ${TextStyleVariantsMap.paragraph1}
+    `,
+  })}
 `;
