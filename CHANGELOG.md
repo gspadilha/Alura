@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/gspadilha/instalura/compare/v1.1.0...v1.1.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* correção dos bugs de tipagem ([d0b5b62](https://github.com/gspadilha/instalura/commit/d0b5b62d7dc101372a968f7afc8794d9ea71c85c))
+
 ## 1.1.0 (2021-02-10)
 
 
