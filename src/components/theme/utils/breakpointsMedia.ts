@@ -1,5 +1,5 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components';
-import { breakpoints } from '../index';
+import breakpoints from '../breakpoints';
 
 export function breakpointsMedia(
   cssByBreakpoint: Record<string, FlattenSimpleInterpolation>,

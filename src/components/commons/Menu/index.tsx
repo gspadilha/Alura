@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../../foundation/Link';
 import Text from '../../foundation/Text';
 import { Logo } from '../../theme/logo';
 import Button from '../Button';
@@ -23,9 +24,9 @@ const Menu: React.FC = () => {
 
           return (
             <li key={url}>
-              <Text tag="a" variant="smallestException" href={url}>
+              <Link variant="smallestException" href={url}>
                 {texto}
-              </Text>
+              </Link>
             </li>
           );
         })}

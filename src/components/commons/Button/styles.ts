@@ -6,6 +6,8 @@ import { propToStyle } from '../../theme/utils/propToStyles';
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
+  margin?: string | object;
+  display?: string | object;
 }
 
 const ButtonGhost = css<IButtonProps>`

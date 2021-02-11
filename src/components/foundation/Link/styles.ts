@@ -3,10 +3,6 @@ import { propToStyle } from '../../theme/utils/propToStyles';
 
 interface ITextProps {
   variant: string;
-  textAlign?: string | object;
-  color?: string | object;
-  marginBottom?: string | object;
-  margin?: string | object;
 }
 
 export const TextStyleVariantsMap: Record<string, any> = {
@@ -25,11 +21,10 @@ export const TextStyleVariantsMap: Record<string, any> = {
   `,
 };
 
-export const TextBase = styled.span<ITextProps>`
+export const LinkBase = styled.a<ITextProps>`
   ${props => TextStyleVariantsMap[props.variant]}
 
   ${propToStyle('textAlign')}
-  ${propToStyle('color')}
   ${propToStyle('marginBottom')}
   ${propToStyle('margin')}
 `;

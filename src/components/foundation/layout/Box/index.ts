@@ -1,8 +1,19 @@
-import React from 'react';
 import styled from 'styled-components';
 import { propToStyle } from '../../../theme/utils/propToStyles';
 
-export const Box = styled.div`
+interface IBoxProps {
+  flex?: string | object;
+  display?: string | object;
+  flexWrap?: string | object;
+  flexDirection?: string | object;
+  justifyContent?: string | object;
+  alignItems?: string | object;
+  backgroundImage?: string | object;
+  backgroundRepeat?: string | object;
+  backgroundPosition?: string | object;
+}
+
+export const Box = styled.div<IBoxProps>`
   ${propToStyle('flex')}
   ${propToStyle('display')}
   ${propToStyle('flexWrap')}

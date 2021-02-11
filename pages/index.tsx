@@ -8,12 +8,12 @@ import { Box } from '../src/components/foundation/layout/Box';
 const Home: React.FC = () => {
   return (
     <Box
-      flex={'1'}
-      display={'flex'}
-      flexWrap={'wrap'}
-      flexDirection={'column'}
-      justifyContent={'space-between'}
-      alignItems={'center'}
+      flex="1"
+      display="flex"
+      flexWrap="wrap"
+      flexDirection="column"
+      justifyContent="space-between"
+      alignItems="center"
       backgroundImage="url(/images/bubbles.svg)"
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"

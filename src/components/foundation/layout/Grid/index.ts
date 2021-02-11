@@ -1,7 +1,17 @@
-import React from 'react';
+import { off } from 'process';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyles';
+
+interface IColProps {
+  offset?: number | object;
+  value?: number | object;
+  flex?: string | object;
+  display?: string | object;
+  flexDirection?: string | object;
+  alignItems?: string | object;
+  justifyContent?: string | object;
+}
 
 const Container = styled.div`
   width: 100%;
@@ -40,7 +50,7 @@ const Row = styled.div`
   margin-left: -1rem;
 `;
 
-const Col = styled.div`
+const Col = styled.div<IColProps>`
   padding-right: 1rem;
   padding-left: 1rem;
   flex-basis: 0;
@@ -54,6 +64,10 @@ const Col = styled.div`
   }
 
   ${({ value }: number | any) => {
+    if (value === undefined) {
+      return css``;
+    }
+
     if (typeof value === 'number') {
       return css`
         flex: 0 0 ${(100 * value) / 12}%;
@@ -96,6 +110,10 @@ const Col = styled.div`
   }}
 
   ${({ offset }: number | any) => {
+    if (offset === undefined) {
+      return css``;
+    }
+
     if (typeof offset === 'number') {
       return css`
         margin-left: ${(100 * offset) / 12}%;
@@ -138,11 +156,6 @@ const Col = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('alignItems')}
 `;
-
-Col.defaultProps = {
-  value: {},
-  offset: {},
-};
 
 export const Grid = {
   Container,
