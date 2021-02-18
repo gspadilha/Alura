@@ -15,6 +15,7 @@ const Home: React.FC = () => {
       justifyContent="space-between"
       alignItems="center"
       backgroundImage="url(/images/bubbles.svg)"
+      backgroundImageDark="url(/images/bubbles-dark.svg)"
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
             <Text
               variant="paragraph1"
               tag="p"
-              color="tertiary.light"
+              color="tertiary.main"
               textAlign={{
                 xs: 'center',
                 md: 'center',
@@ -59,7 +60,7 @@ const Home: React.FC = () => {
 
             <Button
               label="Cadastrar"
-              variant="primary.main"
+              variant="primary"
               margin={{
                 xs: 'auto',
                 md: 'initial',

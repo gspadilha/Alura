@@ -9,11 +9,22 @@ interface ITextProps {
   children: string | number | React.ReactNode;
 }
 
-const Text: React.FC<ITextProps> = ({ tag, variant, children, textAlign }) => {
+const Text: React.FC<ITextProps> = ({
+  tag,
+  variant,
+  color,
+  textAlign,
+  children,
+}) => {
   const finalTag = tag === undefined ? 'span' : tag;
 
   return (
-    <TextBase as={finalTag} variant={variant} textAlign={textAlign}>
+    <TextBase
+      as={finalTag}
+      colorVariant={color}
+      variant={variant}
+      textAlign={textAlign}
+    >
       {children}
     </TextBase>
   );

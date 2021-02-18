@@ -1,6 +1,7 @@
 import styled, { css, StyledComponentBase } from 'styled-components';
 import { TextStyleVariantsMap } from '../../foundation/Text/styles';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
+import { getLodash } from '../../theme/utils/getLodash';
 
 interface IHeaderContainer extends StyledComponentBase<any, {}> {
   LeftSide?: any;
@@ -17,6 +18,8 @@ export const HeaderContainer: IHeaderContainer = styled.nav`
   margin-top: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-color: ${({ theme }) =>
+    getLodash(theme, `colors.background.${theme.mode}.color`)};
 
   ${breakpointsMedia({
     md: css`

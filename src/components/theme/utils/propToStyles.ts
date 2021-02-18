@@ -5,6 +5,10 @@ export function propToStyle(propName: string) {
   return (props: Record<string, any>) => {
     const propValue = props[propName];
 
+    if (typeof propValue === 'undefined' || propValue === undefined) {
+      return css``;
+    }
+
     if (typeof propValue === 'object') {
       return css`
         ${breakpointsMedia({

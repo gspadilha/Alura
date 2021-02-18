@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
+import { getLodash } from '../../theme/utils/getLodash';
 import { propToStyle } from '../../theme/utils/propToStyles';
 
 interface ITextProps {
   variant: string;
   textAlign?: string | object;
-  color?: string | object;
+  colorVariant?: string | object;
   marginBottom?: string | object;
   margin?: string | object;
 }
@@ -28,8 +29,11 @@ export const TextStyleVariantsMap: Record<string, any> = {
 export const TextBase = styled.span<ITextProps>`
   ${props => TextStyleVariantsMap[props.variant]}
 
+  color: ${({ theme, colorVariant }) =>
+    getLodash(theme, `colors.${colorVariant}.${theme.mode}.color`)};
+
   ${propToStyle('textAlign')}
-  ${propToStyle('color')}
+  //${propToStyle('color')}
   ${propToStyle('marginBottom')}
   ${propToStyle('margin')}
 `;
