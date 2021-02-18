@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '../../foundation/Link';
-import Text from '../../foundation/Text';
-import { Logo } from '../../theme/logo';
+import { Logo } from '../../theme/Logo';
+
 import Button from '../Button';
 import { HeaderContainer } from './styles';
 
@@ -33,8 +33,8 @@ const Menu: React.FC = () => {
       </HeaderContainer.CentralSide>
 
       <HeaderContainer.RightSide>
-        <Button label="Entrar" variant="secondary.main" ghost />
-        <Button label="Cadastrar" variant="primary.main" />
+        <Button label="Entrar" variant="secondary" ghost />
+        <Button label="Cadastrar" variant="primary" />
       </HeaderContainer.RightSide>
     </HeaderContainer>
   );

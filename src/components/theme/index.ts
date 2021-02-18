@@ -1,8 +1,9 @@
-import colors from './colorVariants';
-import typography from './typographyVariants';
+import colors from './color';
+import typography from './typography';
 import breakpoints from './breakpoints';
 
 const theme = {
+  mode: 'light',
   colors,
   typography,
   breakpoints,

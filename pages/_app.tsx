@@ -1,15 +1,30 @@
 import { NextRouter } from 'next/dist/next-server/lib/router/router';
 import { AppPropsType } from 'next/dist/next-server/lib/utils';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/components/theme/GlobalStyle';
 import theme from '../src/components/theme';
+import ChangeThemeMode from '../src/components/commons/ChangeThemeMode';
 
 export default function App({
   Component,
   pageProps,
 }: PropsWithChildren<AppPropsType<NextRouter, {}>>) {
+  const [themeModeIsLight, setThemeModeIsLight] = useState(true);
+  const [themeSelected, setThemeSelected] = useState(theme);
+
+  const handleChangeMode = () => {
+    setThemeModeIsLight(currentState => !currentState);
+  };
+
+  useEffect(() => {
+    setThemeSelected({
+      ...theme,
+      mode: themeModeIsLight ? 'light' : 'dark',
+    });
+  }, [themeModeIsLight]);
+
   return (
     <>
       <Head>
@@ -20,8 +35,9 @@ export default function App({
         />
       </Head>
 
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={themeSelected}>
         <GlobalStyle />
+        <ChangeThemeMode onClick={handleChangeMode}>Teste</ChangeThemeMode>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

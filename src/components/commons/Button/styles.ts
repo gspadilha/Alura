@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import { TextStyleVariantsMap } from '../../foundation/Text/styles';
 import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../theme/utils/propToStyles';
+import { getLodash } from '../../theme/utils/getLodash';
 interface IButtonProps {
   ghost?: boolean;
   variant?: string;
@@ -11,24 +11,27 @@ interface IButtonProps {
 }
 
 const ButtonGhost = css<IButtonProps>`
-  color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+  color: ${({ theme, variant }) =>
+    getLodash(theme, `colors.${variant}.${theme.mode}.color`)};
   background-color: transparent;
 
   &:hover {
     border: 1px solid
-      ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+      ${({ theme, variant }) =>
+        getLodash(theme, `colors.${variant}.${theme.mode}.color`)};
   }
 `;
 
 const ButtonDefault = css<IButtonProps>`
   color: ${({ theme, variant }) =>
-    get(theme, `colors.${variant}.contrastText`)};
+    getLodash(theme, `colors.${variant}.${theme.mode}.contrastText`)};
   background-color: ${({ theme, variant }) =>
-    get(theme, `colors.${variant}.color`)};
+    getLodash(theme, `colors.${variant}.${theme.mode}.color`)};
 
   &:hover {
     border: 1px solid
-      ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+      ${({ theme, variant }) =>
+        getLodash(theme, `colors.${variant}.${theme.mode}.color`)};
   }
 `;
 
