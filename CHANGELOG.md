@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/gspadilha/instalura/compare/v1.1.2...v1.1.3) (2021-02-23)
+
+
+### Bug Fixes
+
+* modificaçao na localizaçao do Head ([eddc452](https://github.com/gspadilha/instalura/commit/eddc452bd156437e622c3b8bdb8bc16c31a7ad96))
+
 ### [1.1.2](https://github.com/gspadilha/instalura/compare/v1.1.1...v1.1.2) (2021-02-18)
 
 ### [1.1.1](https://github.com/gspadilha/instalura/compare/v1.1.0...v1.1.1) (2021-02-11)
