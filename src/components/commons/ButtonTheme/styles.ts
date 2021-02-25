@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { getLodash } from '../../theme/utils/getLodash';
 
 export const Container = styled.button`
-  position: fixed;
+  //position: fixed;
   border: 0;
   margin: 0.5rem;
   padding: 0.5rem;

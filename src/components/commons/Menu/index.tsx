@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeChangerContext } from '../../../context/ThemeContextProvider';
 import Link from '../../foundation/Link';
 import { Logo } from '../../theme/Logo';
 
 import Button from '../Button';
+import ButtonTheme from '../ButtonTheme';
 import { HeaderContainer } from './styles';
 
 const links = [
@@ -12,6 +14,8 @@ const links = [
 ];
 
 const Menu: React.FC = () => {
+  const { handleChangeMode } = useContext(ThemeChangerContext);
+
   return (
     <HeaderContainer>
       <HeaderContainer.LeftSide>
@@ -35,6 +39,7 @@ const Menu: React.FC = () => {
       <HeaderContainer.RightSide>
         <Button label="Entrar" variant="secondary" ghost />
         <Button label="Cadastrar" variant="primary" />
+        <ButtonTheme onClick={handleChangeMode} />
       </HeaderContainer.RightSide>
     </HeaderContainer>
   );
