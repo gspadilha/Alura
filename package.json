@@ -8,6 +8,7 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "framer-motion": "^3.7.0",
     "lodash": "^4.17.20",
     "next": "^10.0.7",
     "prop-types": "^15.7.2",
