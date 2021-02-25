@@ -1,11 +1,23 @@
+import { useState } from 'react';
 import Menu from '../src/components/commons/Menu';
 import Text from '../src/components/foundation/Text';
 import Button from '../src/components/commons/Button';
 import Footer from '../src/components/commons/Footer';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import { Box } from '../src/components/foundation/layout/Box';
+import Modal from '../src/components/commons/Modal';
 
 const Home: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Box
       flex="1"
@@ -20,6 +32,10 @@ const Home: React.FC = () => {
       backgroundPosition="bottom right"
     >
       <Menu />
+
+      <Modal isOpen={isModalOpen} onClose={handleModalClose}>
+        {props => <Box {...props}>TESTE</Box>}
+      </Modal>
 
       <Grid.Container>
         <Grid.Row>
@@ -66,6 +82,7 @@ const Home: React.FC = () => {
                 md: 'initial',
               }}
               display="block"
+              onClick={handleModalOpen}
             />
           </Grid.Col>
 
