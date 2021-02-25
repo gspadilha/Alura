@@ -5,6 +5,7 @@ interface ITextProps {
   tag?: 'p' | 'span' | 'h1' | undefined;
   variant: string;
   textAlign?: string | object;
+  marginBottom?: string | object;
   color?: string | object;
   children: string | number | React.ReactNode;
 }

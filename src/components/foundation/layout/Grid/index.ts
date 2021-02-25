@@ -1,16 +1,19 @@
-import { off } from 'process';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyles';
 
-interface IColProps {
+interface IRowOrColProps {
   offset?: number | object;
   value?: number | object;
-  flex?: string | object;
+  flex?: string | number | object;
   display?: string | object;
   flexDirection?: string | object;
   alignItems?: string | object;
   justifyContent?: string | object;
+  marginRight?: string | number | object;
+  marginLeft?: string | number | object;
+  paddingLeft?: string | number | object;
+  paddingRight?: string | number | object;
 }
 
 const Container = styled.div`
@@ -43,14 +46,25 @@ const Container = styled.div`
   })}
 `;
 
-const Row = styled.div`
+const Row = styled.div<IRowOrColProps>`
   display: flex;
   flex-wrap: wrap;
   margin-right: -1rem;
   margin-left: -1rem;
+
+  ${propToStyle('flex')}
+  ${propToStyle('display')}
+  ${propToStyle('flexWrap')}
+  ${propToStyle('flexDirection')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingRight')}
 `;
 
-const Col = styled.div<IColProps>`
+const Col = styled.div<IRowOrColProps>`
   padding-right: 1rem;
   padding-left: 1rem;
   flex-basis: 0;
@@ -155,6 +169,10 @@ const Col = styled.div<IColProps>`
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
   ${propToStyle('alignItems')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingRight')}
 `;
 
 export const Grid = {

@@ -8,6 +8,7 @@ interface IButtonProps {
   variant?: string;
   margin?: string | object;
   display?: string | object;
+  fullWidth?: boolean;
 }
 
 const ButtonGhost = css<IButtonProps>`
@@ -52,6 +53,17 @@ export const ButtonContainer = styled.button<IButtonProps>`
   &:focus {
     opacity: 0.5;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+
+  ${({ fullWidth }) =>
+    fullWidth &&
+    css`
+      width: 100%;
+    `}
 
   ${breakpointsMedia({
     xs: css`

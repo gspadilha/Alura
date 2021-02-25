@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeChangerContext } from '../../../context/ThemeContextProvider';
+import { ThemeChangerContext } from '../../../contexts/ThemeContextProvider';
 import Link from '../../foundation/Link';
 import { Logo } from '../../theme/Logo';
 

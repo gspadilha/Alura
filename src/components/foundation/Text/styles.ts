@@ -33,7 +33,6 @@ export const TextBase = styled.span<ITextProps>`
     getLodash(theme, `colors.${colorVariant}.${theme.mode}.color`)};
 
   ${propToStyle('textAlign')}
-  //${propToStyle('color')}
   ${propToStyle('marginBottom')}
   ${propToStyle('margin')}
 `;
