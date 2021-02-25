@@ -1,4 +1,5 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import { ModalContainer } from './styles';
 
@@ -19,9 +20,22 @@ const Modal = ({ isOpen, onClose, children }: IModalProps) => {
 
   return (
     <ModalContainer isOpen={isOpen} onClick={event => onCloseModal(event)}>
-      {children({
-        'data-modal-safe-area': 'true',
-      })}
+      <motion.div
+        animate={isOpen ? 'open' : 'closed'}
+        transition={{ duration: 0.5 }}
+        variants={{
+          open: {
+            x: '0%',
+          },
+          closed: {
+            x: '-100%',
+          },
+        }}
+      >
+        {children({
+          'data-modal-safe-area': 'true',
+        })}
+      </motion.div>
     </ModalContainer>
   );
 };

@@ -27,4 +27,9 @@ export const ModalContainer = styled.div<IModalContainerProps>`
   overflow: auto;
 
   z-index: 100;
+
+  > div {
+    display: flex;
+    flex: 1;
+  }
 `;
