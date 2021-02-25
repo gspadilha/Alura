@@ -35,7 +35,6 @@ export const Box = styled.div<IBoxProps>`
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
   ${propToStyle('alignItems')}
-  //${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
 `;

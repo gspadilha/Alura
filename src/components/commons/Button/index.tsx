@@ -7,6 +7,7 @@ type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: string;
   margin?: string | object;
   display?: string | object;
+  fullWidth?: boolean;
 };
 
 const Button: React.FC<IButtonProps> = ({

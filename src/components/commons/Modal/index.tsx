@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { IoMdClose } from 'react-icons/io';
 
-import { ModalContainer } from './styles';
+import { ModalContainer, ModalContent } from './styles';
 
 interface IModalProps {
   isOpen: boolean;
@@ -20,22 +21,22 @@ const Modal = ({ isOpen, onClose, children }: IModalProps) => {
 
   return (
     <ModalContainer isOpen={isOpen} onClick={event => onCloseModal(event)}>
-      <motion.div
+      <ModalContent
         animate={isOpen ? 'open' : 'closed'}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         variants={{
           open: {
             x: '0%',
           },
           closed: {
-            x: '-100%',
+            x: '100%',
           },
         }}
       >
         {children({
           'data-modal-safe-area': 'true',
         })}
-      </motion.div>
+      </ModalContent>
     </ModalContainer>
   );
 };

@@ -6,6 +6,7 @@ import Footer from '../src/components/commons/Footer';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import { Box } from '../src/components/foundation/layout/Box';
 import Modal from '../src/components/commons/Modal';
+import FormCadastro from '../src/components/commons/FormCadastro';
 
 const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
       <Menu />
 
       <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-        {props => <Box {...props}>TESTE</Box>}
+        {props => <FormCadastro {...props}></FormCadastro>}
       </Modal>
 
       <Grid.Container>
