@@ -8,10 +8,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   loading?: boolean;
 };
 
-const ChangeThemeMode: React.FC<ButtonProps> = ({
-  loading,
-  ...anotherProps
-}) => {
+const ButtonTheme: React.FC<ButtonProps> = ({ loading, ...anotherProps }) => {
   return (
     <Container {...anotherProps}>
       <AtivarModoLight>
@@ -25,4 +22,4 @@ const ChangeThemeMode: React.FC<ButtonProps> = ({
   );
 };
 
-export default ChangeThemeMode;
+export default ButtonTheme;
