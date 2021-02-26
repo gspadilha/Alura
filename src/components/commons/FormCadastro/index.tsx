@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import api from '../../../services/api';
 import TextField from '../../forms/TextField';
 import { Box } from '../../foundation/layout/Box';
@@ -21,7 +21,7 @@ const FormContent = () => {
     setCanSubmit(formData.email.length > 0 && formData.usuario.length > 0);
   }, [formData]);
 
-  const handleChangeField = event => {
+  const handleChangeField = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
 
     const newFormData = {
@@ -32,7 +32,7 @@ const FormContent = () => {
     setFormData(newFormData);
   };
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     const data = {
