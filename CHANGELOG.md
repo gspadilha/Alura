@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/gspadilha/instalura/compare/v1.1.4...v1.2.0) (2021-02-26)
+
+
+### Features
+
+* **component:** adicionado a base para o Modal ([d3739a5](https://github.com/gspadilha/instalura/commit/d3739a5dbe7a4526078c202e878d1f11d8ba38e2))
+* **component:** adicionado animaçao ao Modal ([eb98ed8](https://github.com/gspadilha/instalura/commit/eb98ed88d7e4d2c49a97e3180c49c68a0e41b946))
+* **component:** implementaçao do formulario de cadastro ([cc9e5d4](https://github.com/gspadilha/instalura/commit/cc9e5d45b696c9013099bc2ca588c9b1141b15ec))
+* criaçao de um contexto unico para o tema ([5cf8459](https://github.com/gspadilha/instalura/commit/5cf8459660b89d73b8955d5c74d88a080cdfb484))
+
+
+### Bug Fixes
+
+* **props:** correçao em algumas tipagens ([2d8dc25](https://github.com/gspadilha/instalura/commit/2d8dc2520a6c8fb9b30f006dc41da845656517b0))
+
 ### [1.1.4](https://github.com/gspadilha/instalura/compare/v1.1.3...v1.1.4) (2021-02-23)
 
 ### [1.1.3](https://github.com/gspadilha/instalura/compare/v1.1.2...v1.1.3) (2021-02-23)
